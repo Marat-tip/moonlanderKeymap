@@ -117,7 +117,7 @@ enum tap_dance_codes {
     TG(2),    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     KC_MEH,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
-                      KC_UP,  KC_DOWN, MT(LA_CHNG, LA_SYNC), KC_TRANSPARENT, KC_TRANSPARENT, \
+                      LA_CHNG,  KC_DOWN, KC_UP, LA_SYNC, KC_TRANSPARENT, \
                       MT(MOD_LCTL, KC_ESCAPE), /* RIGHT RED THUMB KEY */ \
                       KC_ENTER, AG_DOT, KC_SPC /* RIGHT THUMB KEYS */ \
   ), \
