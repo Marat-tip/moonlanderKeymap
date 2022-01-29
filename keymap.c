@@ -104,18 +104,18 @@ enum tap_dance_codes {
   /*-------------------------------------------------------------------------*/ \
   [L_DEFAULT] = MY_layout( \
     /* LEFT HALF */ \
-    KC_ESC,  AG_PLUS, AG_SCLN, AG_DQUO, AG_QUES, EN_QUOT, EN_AT, \
+    NONE_KEY,  AG_PLUS, AG_SCLN, AG_DQUO, AG_QUES, EN_QUOT, EN_AT, \
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     LGUI(KC_A), \
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
-    CTRL_0,  WEBUSB_PAIR, AG_EXCL, TD(DANCE_2), TD(DANCE_3), \
+    CTRL_0,  NONE_KEY, AG_EXCL, TD(DANCE_2), TD(DANCE_3), \
     MT(MOD_LALT, KC_APPLICATION), /* LEFT RED THUMB KEY */ \
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
     EN_CIRC, AG_EQL, AG_COLN, AG_COMM, AG_QUES, AG_SLSH, AG_MINS, \
-    TG(2),    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
-    KC_MEH,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
+    NONE_KEY,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
+    NONE_KEY,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
                       LA_CHNG,  KC_DOWN, KC_UP, LA_SYNC, KC_TRANSPARENT, \
                       MT(MOD_LCTL, KC_ESCAPE), /* RIGHT RED THUMB KEY */ \
@@ -173,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     L_RU, L_RU_S,
 
     /* Left hand */
-             RU_J,    RU_TS,   RU_U,    RU_K,   RU_E,
+             RU_J,    RU_TS,   RU_U,    RU_K,   RU_JE,
              RU_F,    RU_Y,    RU_V,    RU_A,    RU_P,
     XXXXXXX, RU_JA,   RU_CH,   RU_S,    RU_M,    RU_I,
 
@@ -184,7 +184,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* ---------------------------- Shift layer ---------------------------- */
     /* Left hand */
-             RU_S_J,    RU_S_TS,   RU_S_U,    RU_S_K,   RU_S_E,
+             RU_S_J,    RU_S_TS,   RU_S_U,    RU_S_K,   RU_S_JE,
              RU_S_F,    RU_S_Y,    RU_S_V,    RU_S_A,    RU_S_P,
     XXXXXXX, RU_S_JA,   RU_S_CH,   RU_S_S,    RU_S_M,    RU_S_I,
 
