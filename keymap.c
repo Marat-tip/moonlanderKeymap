@@ -58,6 +58,7 @@ enum Layers {
 
   L_RU,
   L_RU_S,
+  L_SYMBOLS,
 };
 
 enum custom_keycodes {
@@ -104,20 +105,20 @@ enum tap_dance_codes {
   /*-------------------------------------------------------------------------*/ \
   [L_DEFAULT] = MY_layout( \
     /* LEFT HALF */ \
-    NONE_KEY,  AG_PLUS, AG_SCLN, AG_DQUO, AG_QUES, EN_QUOT, EN_AT, \
+    EN_AT,  AG_PLUS, AG_QUES, EN_QUOT, AG_SCLN, AG_DQUO, AG_SLSH, \
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     LGUI(KC_A), \
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
-    CTRL_0,  NONE_KEY, AG_EXCL, TD(DANCE_2), TD(DANCE_3), \
+    CTRL_0,  NONE_KEY, NONE_KEY, ALT_0, TG(L_SYMBOLS), \
     MT(MOD_LALT, KC_APPLICATION), /* LEFT RED THUMB KEY */ \
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
-    EN_CIRC, AG_EQL, AG_COLN, AG_COMM, AG_QUES, AG_SLSH, AG_MINS, \
+    AG_BSLS, AG_COLN, AG_EQL, NONE_KEY, AG_QUES, EN_CIRC, EN_TILD, \
     NONE_KEY,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
-    NONE_KEY,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
+    AG_COMM,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
-                      LA_CHNG,  KC_DOWN, KC_UP, LA_SYNC, KC_TRANSPARENT, \
+                      LA_CHNG,  KC_DOWN, KC_UP, LA_SYNC, NONE_KEY, \
                       MT(MOD_LCTL, KC_ESCAPE), /* RIGHT RED THUMB KEY */ \
                       KC_ENTER, AG_DOT, KC_SPC /* RIGHT THUMB KEYS */ \
   ), \
@@ -192,7 +193,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RU_S_N,   RU_S_G,    RU_S_SH,    RU_S_SC,    RU_S_Z,
     RU_S_R,   RU_S_O,    RU_S_L,     RU_S_D,     RU_S_ZH,   RU_S_E,
     RU_S_T,   RU_S_SF,   RU_S_B,     RU_S_JU,    RU_S_H,    _______
-  )
+  ),
+  [L_SYMBOLS] = MY_layout(
+    // LEFT HALF
+    _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,
+    _______, _______, _______, KC_LPRN,     KC_RPRN,     KC_PIPE, _______,
+    _______, _______, _______, KC_LCBR,     KC_RCBR,     _______, _______,
+    _______, _______, _______, KC_LBRACKET, KC_RBRACKET, _______,
+    _______, _______, _______, _______,     _______,
+    _______, // LEFT RED THUMB KEY
+    _______, _______, _______, // LEFT THUMB KEYS
+
+    // RIGHT HALF
+    KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,  _______,
+    TD(DANCE_2), _______, _______,    KC_MS_UP,   _______, _______, _______,
+    TD(DANCE_3), _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, _______, _______,
+    _______, _______, _______, _______, _______,  _______,
+    _______, _______, _______, _______, _______,
+    _______, // RIGHT RED THUMB KEY
+    _______, _______, _______ // RIGHT THUMB KEYS
+  ),
 };
 // const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   [ENG_LAYER] = LAYOUT_moonlander(
