@@ -103,7 +103,7 @@ enum tap_dance_codes {
   /*-------------------------------------------------------------------------*/ \
   [L_DEFAULT] = MY_layout( \
     /* LEFT HALF */ \
-    EN_AT,  NONE_KEY, AG_PLUS, EN_CIRC, AG_SCLN, AG_DQUO, AG_SLSH, \
+    EN_AT,  AG_EXCL, AG_PLUS, EN_CIRC, AG_SCLN, AG_DQUO, AG_SLSH, \
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     LGUI(KC_A), \
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
