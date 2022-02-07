@@ -207,8 +207,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT HALF
     _______, KC_F6,   KC_F7,    KC_F8,     KC_F9,   KC_F10,  KC_F11,
     _______, _______, _______,  _______,   _______, _______, KC_F12,
-    _______, KC_LEFT,       KC_DOWN,       KC_UP,       KC_RIGHT,        _______, _______,
-    _______, LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RIGHT),  _______,
+    _______,  KC_LEFT,       KC_DOWN,       KC_UP,       KC_RIGHT, _______,  _______, 
+    LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RIGHT),  _______, _______,
     _______, _______,       _______,       _______,     _______,
     _______, // RIGHT RED THUMB KEY
     _______, _______, _______ // RIGHT THUMB KEYS
