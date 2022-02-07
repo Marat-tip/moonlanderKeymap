@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "print.h"
 #include "version.h"
 
 #define CUSTOM_SAFE_RANGE ML_SAFE_RANGE
@@ -112,7 +111,7 @@ enum tap_dance_codes {
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
-    AG_BSLS, AG_COLN, AG_EQL, NONE_KEY, AG_QUES, EN_TILD,   NONE_KEY, \
+    AG_BSLS, AG_COLN, AG_EQL, NONE_KEY, AG_QUES, AG_ASTR,  EN_TILD, \
     EN_QUOT,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     AG_COMM,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
@@ -292,9 +291,9 @@ extern bool g_suspend_state;
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
-   debug_enable = false;
-//  debug_matrix = true; 
-   debug_keyboard = false;
+//    debug_enable = false;
+//    debug_matrix = true; 
+//    debug_keyboard = false;
    rgb_matrix_enable();
 }
 
@@ -307,7 +306,7 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
 
     [L_SYMBOLS] = { {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204}, {78,218,204} },
 
-    [L_NUMBERS] = { {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246}, {4,29,246} }
+    [L_NUMBERS] = { {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233}, {21,236,233} },
 };
 
 void set_layer_color(int layer) {
@@ -362,7 +361,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
   if (!lang_shift_process_record(keycode, record))
     return false;
-  switch (keycode) {
+
+//   switch (keycode) {
     // case AG_DOT:
     //   print("AG_DOT switched\n");
     //   if (record->event.pressed) {
@@ -384,30 +384,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     //    }
     //   print("return false from AG_DOT block\n");
     //   return false;
-    case RGB_SLD:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-      }
-      return false;
-    case HSV_0_255_255:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-        rgblight_sethsv(0,255,255);
-      }
-      return false;
-    case HSV_86_255_128:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-        rgblight_sethsv(86,255,128);
-      }
-      return false;
-    case HSV_172_255_255:
-      if (record->event.pressed) {
-        rgblight_mode(1);
-        rgblight_sethsv(172,255,255);
-      }
-      return false;
-  }
+//   }
   return true;
 }
 
@@ -601,6 +578,7 @@ void dance_4_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[4].step = dance_step(state);
     switch (dance_state[4].step) {
         case SINGLE_TAP: register_code16(KC_LGUI); break;
+        case SINGLE_HOLD: register_code16(KC_LGUI); break;
         case DOUBLE_TAP: register_code16(LGUI(KC_SPACE)); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_LGUI); register_code16(KC_LGUI);
     }
@@ -610,6 +588,7 @@ void dance_4_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[4].step) {
         case SINGLE_TAP: unregister_code16(KC_LGUI); break;
+        case SINGLE_HOLD: unregister_code16(KC_LGUI); break;
         case DOUBLE_TAP: unregister_code16(LGUI(KC_SPACE)); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_LGUI); break;
     }
