@@ -67,7 +67,6 @@ enum custom_keycodes {
 };
 
 enum tap_dance_codes {
-  DANCE_0,
   DANCE_1,
   DANCE_2,
   DANCE_3,
@@ -207,7 +206,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT HALF
     _______, KC_F6,   KC_F7,    KC_F8,     KC_F9,   KC_F10,  KC_F11,
     _______, _______, _______,  _______,   _______, _______, KC_F12,
-    _______,  KC_LEFT,       KC_DOWN,       KC_UP,       KC_RIGHT, _______,  _______, 
+    _______,  KC_LEFT,       KC_DOWN,       KC_UP,       KC_RIGHT, _______,  _______,
     LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RIGHT),  _______, _______,
     _______, _______,       _______,       _______,     _______,
     _______, // RIGHT RED THUMB KEY
@@ -255,35 +254,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   [ENG_LAYER] = LAYOUT_moonlander(
-//     KC_AMPR,        TD(DANCE_0),    KC_AT,          KC_HASH,        KC_PERC,        KC_TILD,        LGUI(KC_A),                                     KC_DLR,         KC_CIRC,        TD(DANCE_5),    KC_ASTR,        TD(DANCE_6),    KC_PLUS,        KC_MINUS,       
-//     KC_DELETE,      KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TD(DANCE_1),                                    TG(2),          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           TD(DANCE_7),    
-//     KC_TAB,         KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_HYPR,                                                                        KC_MEH,         KC_H,           KC_J,           KC_K,           KC_L,           LT(3,KC_SCOLON),TD(DANCE_8),    
-//     KC_CAPSLOCK,    MT(MOD_LCTL, KC_Z),KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_RCTRL,       KC_TRANSPARENT, 
-//     LT(2,KC_GRAVE), WEBUSB_PAIR,    LALT(LCTL(KC_SPACE)),TD(DANCE_2),    TD(DANCE_3),    MT(MOD_LALT, KC_APPLICATION),                                                                                                MT(MOD_LCTL, KC_ESCAPE),KC_UP,          KC_DOWN,        KC_TRANSPARENT, KC_TRANSPARENT, MO(1),          
+//     KC_AMPR,        TD(DANCE_0),    KC_AT,          KC_HASH,        KC_PERC,        KC_TILD,        LGUI(KC_A),                                     KC_DLR,         KC_CIRC,        TD(DANCE_5),    KC_ASTR,        TD(DANCE_6),    KC_PLUS,        KC_MINUS,
+//     KC_DELETE,      KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TD(DANCE_1),                                    TG(2),          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           TD(DANCE_7),
+//     KC_TAB,         KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_HYPR,                                                                        KC_MEH,         KC_H,           KC_J,           KC_K,           KC_L,           LT(3,KC_SCOLON),TD(DANCE_8),
+//     KC_CAPSLOCK,    MT(MOD_LCTL, KC_Z),KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_RCTRL,       KC_TRANSPARENT,
+//     LT(2,KC_GRAVE), WEBUSB_PAIR,    LALT(LCTL(KC_SPACE)),TD(DANCE_2),    TD(DANCE_3),    MT(MOD_LALT, KC_APPLICATION),                                                                                                MT(MOD_LCTL, KC_ESCAPE),KC_UP,          KC_DOWN,        KC_TRANSPARENT, KC_TRANSPARENT, MO(1),
 //     KC_LSHIFT,      KC_BSPACE,      TD(DANCE_4),                    MT(MOD_LALT, KC_ENTER), AG_DOT,         KC_SPACE
 //   ),
 //   [RU_LAYER] = LAYOUT_moonlander(
-//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-//     KC_TRANSPARENT, RU_SHTI,        RU_TSE,         RU_U,           RU_KA,          RU_IE,          KC_TRANSPARENT,                                 KC_TRANSPARENT, RU_EN,          RU_GHE,         RU_SHA,         RU_SHCH,        RU_ZE,          RU_HA,          
-//     KC_TRANSPARENT, RU_EF,          RU_YERU,        RU_VE,          RU_A,           RU_PE,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, RU_ER,          RU_O,           RU_EL,          RU_DE,          RU_ZHE,         RU_E,           
-//     KC_TRANSPARENT, RU_YA,          RU_CHE,         RU_ES,          RU_EM,          RU_I,                                           RU_TE,          RU_SOFT,        RU_BE,          RU_YU,          KC_TRANSPARENT, KC_TRANSPARENT, 
-//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+//     KC_TRANSPARENT, RU_SHTI,        RU_TSE,         RU_U,           RU_KA,          RU_IE,          KC_TRANSPARENT,                                 KC_TRANSPARENT, RU_EN,          RU_GHE,         RU_SHA,         RU_SHCH,        RU_ZE,          RU_HA,
+//     KC_TRANSPARENT, RU_EF,          RU_YERU,        RU_VE,          RU_A,           RU_PE,          KC_TRANSPARENT,                                                                 KC_TRANSPARENT, RU_ER,          RU_O,           RU_EL,          RU_DE,          RU_ZHE,         RU_E,
+//     KC_TRANSPARENT, RU_YA,          RU_CHE,         RU_ES,          RU_EM,          RU_I,                                           RU_TE,          RU_SOFT,        RU_BE,          RU_YU,          KC_TRANSPARENT, KC_TRANSPARENT,
+//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
 //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
 //   ),
 //   [2] = LAYOUT_moonlander(
-//     KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
-//     KC_TRANSPARENT, KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_UP,          KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,         
-//     KC_TRANSPARENT, KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,       KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_DOWN,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     KC_TRANSPARENT, 
-//     KC_TRANSPARENT, KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,                                        KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      KC_TRANSPARENT, 
-//     KC_TRANSPARENT, KC_COMMA,       HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,RGB_MOD,                                                                                                        RGB_TOG,        KC_TRANSPARENT, KC_DOT,         KC_0,           KC_EQUAL,       KC_TRANSPARENT, 
+//     KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
+//     KC_TRANSPARENT, KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_UP,          KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
+//     KC_TRANSPARENT, KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,       KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_DOWN,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     KC_TRANSPARENT,
+//     KC_TRANSPARENT, KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,                                        KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      KC_TRANSPARENT,
+//     KC_TRANSPARENT, KC_COMMA,       HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,RGB_MOD,                                                                                                        RGB_TOG,        KC_TRANSPARENT, KC_DOT,         KC_0,           KC_EQUAL,       KC_TRANSPARENT,
 //     RGB_VAD,        RGB_VAI,        TOGGLE_LAYER_COLOR,                RGB_SLD,        RGB_HUD,        RGB_HUI
 //   ),
 //   [3] = LAYOUT_moonlander(
-//     AU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,          
-//     MU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_UP,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+//     AU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
+//     MU_TOG,         KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_UP,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
 //     MU_MOD,         KC_TRANSPARENT, KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MEDIA_PLAY_PAUSE,
-//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT, KC_TRANSPARENT, 
-//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_BTN1,     KC_MS_BTN2,     KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  KC_TRANSPARENT, KC_TRANSPARENT, 
+//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT, KC_TRANSPARENT,
+//     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_BTN1,     KC_MS_BTN2,     KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  KC_TRANSPARENT, KC_TRANSPARENT,
 //     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_WWW_BACK
 //   ),
 // };
@@ -293,7 +292,7 @@ extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
 //    debug_enable = false;
-//    debug_matrix = true; 
+//    debug_matrix = true;
 //    debug_keyboard = false;
    rgb_matrix_enable();
 }
@@ -328,7 +327,6 @@ void set_layer_color(int layer) {
 }
 
 void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case L_EN:
       set_layer_color(L_EN);
@@ -358,36 +356,21 @@ void rgb_matrix_indicators_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
    uprintf("KL: kc: 0x%04X, col: %u, row: %u\n", keycode, record->event.key.col, record->event.key.row);
-#endif 
+#endif
+    if (!lang_shift_process_record(keycode, record))
+        return false;
 
-  if (!lang_shift_process_record(keycode, record))
-    return false;
-
-//   switch (keycode) {
-    // case AG_DOT:
-    //   print("AG_DOT switched\n");
-    //   if (record->event.pressed) {
-    //     if(IS_LAYER_ON(RU_LAYER)){
-    //         print("register RU_DOT\n");
-    //         register_code(RU_DOT);
-    //     } else {
-    //         print("register KC_DOT\n");
-    //         register_code(KC_DOT);
-    //     } 
-    //    } else {
-    //     if(IS_LAYER_ON(RU_LAYER)){
-    //         print("unregister RU_DOT\n");
-    //         unregister_code(RU_DOT);
-    //     } else {
-    //         print("unregister KC_DOT\n");
-    //         unregister_code(KC_DOT);
-    //     } 
-    //    }
-    //   print("return false from AG_DOT block\n");
-    //   return false;
-//   }
   return true;
 }
+
+
+const uint16_t PROGMEM HARD_SIGN_COMBO[] = {RU_R, RU_T, COMBO_END};
+const uint16_t PROGMEM HARD_SIGN_SHIFTED_COMBO[] = {RU_S_R, RU_S_T, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [0] = COMBO(HARD_SIGN_COMBO, RU_HD),
+  [1] = COMBO(HARD_SIGN_SHIFTED_COMBO, RU_S_HD),
+};
 
 typedef struct {
     bool is_press_action;
@@ -403,7 +386,7 @@ enum {
     MORE_TAPS
 };
 
-static tap dance_state[9];
+static tap dance_state[10];
 
 uint8_t dance_step(qk_tap_dance_state_t *state);
 
@@ -419,42 +402,6 @@ uint8_t dance_step(qk_tap_dance_state_t *state) {
     return MORE_TAPS;
 }
 
-
-void on_dance_0(qk_tap_dance_state_t *state, void *user_data);
-void dance_0_finished(qk_tap_dance_state_t *state, void *user_data);
-void dance_0_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void on_dance_0(qk_tap_dance_state_t *state, void *user_data) {
-    if(state->count == 3) {
-        tap_code16(KC_QUES);
-        tap_code16(KC_QUES);
-        tap_code16(KC_QUES);
-    }
-    if(state->count > 3) {
-        tap_code16(KC_QUES);
-    }
-}
-
-void dance_0_finished(qk_tap_dance_state_t *state, void *user_data) {
-    dance_state[0].step = dance_step(state);
-    switch (dance_state[0].step) {
-        case SINGLE_TAP: register_code16(KC_QUES); break;
-        case SINGLE_HOLD: register_code16(KC_EXLM); break;
-        case DOUBLE_TAP: register_code16(KC_QUES); register_code16(KC_QUES); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_QUES); register_code16(KC_QUES);
-    }
-}
-
-void dance_0_reset(qk_tap_dance_state_t *state, void *user_data) {
-    wait_ms(10);
-    switch (dance_state[0].step) {
-        case SINGLE_TAP: unregister_code16(KC_QUES); break;
-        case SINGLE_HOLD: unregister_code16(KC_EXLM); break;
-        case DOUBLE_TAP: unregister_code16(KC_QUES); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_QUES); break;
-    }
-    dance_state[0].step = 0;
-}
 void on_dance_1(qk_tap_dance_state_t *state, void *user_data);
 void dance_1_finished(qk_tap_dance_state_t *state, void *user_data);
 void dance_1_reset(qk_tap_dance_state_t *state, void *user_data);
@@ -737,7 +684,6 @@ void dance_8_reset(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-        [DANCE_0] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_0, dance_0_finished, dance_0_reset),
         [DANCE_1] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_1, dance_1_finished, dance_1_reset),
         [DANCE_2] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_2, dance_2_finished, dance_2_reset),
         [DANCE_3] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_3, dance_3_finished, dance_3_reset),

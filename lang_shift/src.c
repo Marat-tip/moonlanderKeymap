@@ -323,22 +323,18 @@ uint8_t lang_get_shift_layer_number(void) {
 }
 
 void lang_synchronize(void) {
-  print("Lang cahnge caps case\n");
   lang_timer = timer_read();
   switch (lang_current_change) {
     case LANG_CHANGE_CAPS: {
       // do not work on MacOs
       // Костыль, потому что при нажатии Shift+Caps включается режим Caps, а не переключение языка :facepalm:
-      print("Lang change caps case\n");
       if (shift_current == 1) {
       	unregister_code(KC_LSHIFT);
       	register_code(KC_CAPSLOCK);
       	unregister_code(KC_CAPSLOCK);
       	register_code(KC_LSHIFT);
       } else {
-        print("registering capslock\n");
       	register_code(KC_LCAP);
-        print("pressed caps\n");
       }
     } break;
     case LANG_CHANGE_ALT_SHIFT: {
@@ -381,7 +377,6 @@ void lang_synchronize(void) {
 void lang_activate(Lang lang) {
 	// Нужно дополнять этот код, если нужно три языка и более
 	if (lang_current != lang) {
-    print("lang != lang_current\n");
 		lang_synchronize();
 	}
 	lang_current = lang;
@@ -476,7 +471,6 @@ bool lang_shift_process_custom_keycodes(Key key, keyrecord_t* record) {
       return false;
     case LA_CHNG:
       if (down) {
-        print("la_chng\n");
         if (lang_should_be == 0) {
           lang_activate_from_user(1);
           layer_on(2);  
