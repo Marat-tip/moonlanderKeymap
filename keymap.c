@@ -776,7 +776,7 @@ void dance_8_reset(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-        [SOFT_HARD_SIGN] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_0, dance_0_finished, dance_0_reset),
+        [SOFT_HARD_SIGN] = ACTION_TAP_DANCE_DOUBLE(RU_SF, RU_HD),
         [SOFT_HARD_SIGN_S_LAYER] = ACTION_TAP_DANCE_FN_ADVANCED(signs_shift_layer_dance, signs_shift_layer_dance_finished, signs_shift_layer_dance_finished_reset),
         [DANCE_1] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_1, dance_1_finished, dance_1_reset),
         [DANCE_2] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_2, dance_2_finished, dance_2_reset),
