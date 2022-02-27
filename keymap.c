@@ -111,7 +111,7 @@ enum tap_dance_codes {
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
-    AG_BSLS, AG_COLN, AG_EQL, AG_ASTR, AG_QUES, EN_TILD, NONE_KEY, \
+    AG_BSLS, AG_COLN, AG_EQL, AG_ASTR, AG_QUES, EN_TILD, EN_DLR, \
     EN_QUOT,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     AG_COMM,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
@@ -196,8 +196,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_SYMBOLS] = MY_layout(
     // LEFT HALF
     TG(L_SYMBOLS), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, _______,
-    _______, EN_HASH, AG_PERC, KC_LPRN,     KC_RPRN,     KC_PIPE, _______,
-    _______, EN_LT,   EN_GT,   KC_LCBR,     KC_RCBR,     _______, _______,
+    _______, EN_HASH, AG_PERC, KC_LPRN,     KC_RPRN,     EN_PIPE, _______,
+    _______, EN_LT,   EN_GT,   KC_LCBR,     KC_RCBR,     EN_AMPR, _______,
     _______, _______, _______, KC_LBRACKET, KC_RBRACKET, _______,
     _______, _______, _______, _______,     _______,
     _______, // LEFT RED THUMB KEY
