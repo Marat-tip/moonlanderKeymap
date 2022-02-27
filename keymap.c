@@ -106,7 +106,7 @@ enum tap_dance_codes {
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     LGUI(KC_A), \
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
-    CTRL_0,  TG(L_NUMBERS), NONE_KEY, ALT_0, TG(L_SYMBOLS), \
+    CTRL_0,  TG(L_NUMBERS), NONE_KEY, ALT_0, OSL(L_SYMBOLS), \
     MT(MOD_LALT, KC_APPLICATION), /* LEFT RED THUMB KEY */ \
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
