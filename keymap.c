@@ -113,7 +113,7 @@ enum tap_dance_codes {
     /* RIGHT HALF */ \
     AG_BSLS, AG_COLN, AG_EQL, AG_ASTR, AG_QUES, EN_TILD, EN_DLR, \
     EN_QUOT,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
-    AG_COMM,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
+    AG_CMSP,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
                       LA_CHNG,  NONE_KEY, NONE_KEY, LA_SYNC, NONE_KEY, \
                       MT(MOD_LCTL, KC_ESCAPE), /* RIGHT RED THUMB KEY */ \
