@@ -206,7 +206,7 @@ void shift_once_disable(void) {
 
 void shift_once_process(Key key, keyrecord_t* record) {
   bool down = record->event.pressed;
-  
+
   if (shift_once_disable_stage == 1) {
     shift_once_disable_stage = 0;
     shift_activate_from_user(false);
@@ -323,6 +323,7 @@ uint8_t lang_get_shift_layer_number(void) {
 }
 
 void lang_synchronize(void) {
+  printf("lang sync\n");
   lang_timer = timer_read();
   switch (lang_current_change) {
     case LANG_CHANGE_CAPS: {
@@ -343,7 +344,7 @@ void lang_synchronize(void) {
       unregister_code(KC_LSHIFT);
       unregister_code(KC_LALT);
 
-      // Костыль, потому что при зажатом шифте если хочется нажать клавишу, которая переключает язык, то шифт слетает... 
+      // Костыль, потому что при зажатом шифте если хочется нажать клавишу, которая переключает язык, то шифт слетает...
       if (shift_current == 1) {
         register_code(KC_LSHIFT);
       }
@@ -366,15 +367,18 @@ void lang_synchronize(void) {
       unregister_code(KC_LGUI);
     } break;
     case LANG_CHANGE_CTRL_SPACE: {
-      register_code(KC_LCTRL);
+      register_code(KC_LCTL);
       register_code(KC_SPACE);
+      wait_ms(100);
       unregister_code(KC_SPACE);
-      unregister_code(KC_LCTRL);
+      unregister_code(KC_LCTL);
     } break;
   }
+  printf("finish lang sync\n");
 }
 
 void lang_activate(Lang lang) {
+  printf("lang activate with lang %d\n", lang);
 	// Нужно дополнять этот код, если нужно три языка и более
 	if (lang_current != lang) {
 		lang_synchronize();
@@ -416,6 +420,7 @@ Key lang_process(Key key, bool down) {
 void lang_user_timer(void) {
 	// Нужно выключать язык после прохождения определённого времени, потому что пользователь ожидает как будто шифт на самом деле включён
 	if (lang_pressed_count == 0 && lang_current != lang_should_be && timer_read() - lang_timer >= 100) {
+    printf("lang activate user timer%d\n", lang_should_be);
 		lang_activate(lang_should_be);
 	}
 }
@@ -437,7 +442,7 @@ void lang_shift_press_key(Key key, bool down) {
       .time = timer_read(),
     },
   };
-  
+
   lang_shift_process_record(key, &record);
 }
 
@@ -473,7 +478,7 @@ bool lang_shift_process_custom_keycodes(Key key, keyrecord_t* record) {
       if (down) {
         if (lang_should_be == 0) {
           lang_activate_from_user(1);
-          layer_on(2);  
+          layer_on(2);
         } else {
           lang_activate_from_user(0);
           layer_off(2);
@@ -510,7 +515,7 @@ bool lang_shift_process_custom_keycodes(Key key, keyrecord_t* record) {
         lang_shift_tap_key(AG_DOT);
         lang_shift_tap_key(AG_DOT);
         lang_shift_tap_key(AG_DOT);
-      }    
+      }
       return false;
       break;
     case AG_CMSP:
