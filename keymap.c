@@ -107,7 +107,7 @@ enum tap_dance_codes {
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
     CTRL_0,  TG(L_NUMBERS), NONE_KEY, ALT_0, OSL(L_SYMBOLS), \
-    MT(MOD_LALT, KC_APPLICATION), /* LEFT RED THUMB KEY */ \
+    KC_TAB, /* LEFT RED THUMB KEY */ \
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
@@ -116,7 +116,7 @@ enum tap_dance_codes {
     AG_CMSP,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
                       LA_CHNG,  NONE_KEY, NONE_KEY, LA_SYNC, NONE_KEY, \
-                      MT(MOD_LCTL, KC_ESCAPE), /* RIGHT RED THUMB KEY */ \
+                      KC_ESCAPE, /* RIGHT RED THUMB KEY */ \
                       KC_ENTER, AG_DOT, KC_SPC /* RIGHT THUMB KEYS */ \
   ), \
   \
@@ -195,7 +195,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   [L_SYMBOLS] = MY_layout(
     // LEFT HALF
-    TG(L_SYMBOLS), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, _______,
+    _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, _______,
     _______, EN_HASH, AG_PERC, KC_LPRN,     KC_RPRN,     EN_PIPE, _______,
     _______, EN_LT,   EN_GT,   KC_LCBR,     KC_RCBR,     EN_AMPR, _______,
     _______, _______, _______, KC_LBRACKET, KC_RBRACKET, _______,
@@ -209,13 +209,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_LEFT,       KC_DOWN,       KC_UP,       KC_RIGHT, _______,  _______,
     LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RIGHT),  _______, _______,
     _______, _______,       _______,       _______,     _______,
-    _______, // RIGHT RED THUMB KEY
+    TG(L_SYMBOLS), // RIGHT RED THUMB KEY
     _______, _______, _______ // RIGHT THUMB KEYS
   ),
 
   [L_NUMBERS] = MY_layout(
     // LEFT HALF
-    TG(L_NUMBERS), _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, SCREENSHOT_MAC, _______, _______, _______, _______,
     _______, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_PREV_TRACK, KC_AUDIO_VOL_UP, KC_AUDIO_VOL_DOWN, KC_MEDIA_NEXT_TRACK, _______,
     _______, _______, _______, _______, _______, _______,
@@ -228,9 +228,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______,  AG_4,    AG_5,    AG_6,    _______, _______,
     _______, _______,  AG_0,    AG_1,    AG_2,    AG_3,    _______,
              _______,  AG_9,    AG_8,    AG_7,    _______, _______,
-                       _______,  _______,  _______,  _______,  _______,
-                       _______, // RIGHT RED THUMB KEY
-                       _______, _______, _______ // RIGHT THUMB KEYS
+    _______,  _______,  _______,  _______,  _______,
+    TG(L_NUMBERS), // RIGHT RED THUMB KEY
+    _______, _______, _______ // RIGHT THUMB KEYS
   ),
 //   [L_SYMBOLS] = MY_layout(
 //     // LEFT HALF
@@ -360,7 +360,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!lang_shift_process_record(keycode, record))
         return false;
 
-  return true;
+    return true;
 }
 
 
