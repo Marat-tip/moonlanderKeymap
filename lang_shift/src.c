@@ -332,6 +332,7 @@ void lang_synchronize(void) {
       if (shift_current == 1) {
       	unregister_code(KC_LSHIFT);
       	register_code(KC_CAPSLOCK);
+        wait_ms(50);
       	unregister_code(KC_CAPSLOCK);
       	register_code(KC_LSHIFT);
       } else {
