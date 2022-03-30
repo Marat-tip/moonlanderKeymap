@@ -115,7 +115,7 @@ enum tap_dance_codes {
     EN_QUOT,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     AG_CMSP,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
-                      LA_CHNG,  NONE_KEY, NONE_KEY, LA_SYNC, EN_GRV, \
+                      LA_CHNG,  LA_CAPS, LA_CTSP, LA_SYNC, EN_GRV, \
                       KC_ESCAPE, /* RIGHT RED THUMB KEY */ \
                       KC_ENTER, AG_DOT, KC_SPC /* RIGHT THUMB KEYS */ \
   ), \

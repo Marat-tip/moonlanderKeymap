@@ -278,6 +278,7 @@ enum lang_shift_keycodes {
 	LA_ALSH, /* Задаёт переключение языка на Alt + Shift. */
 	LA_CTSH, /* Задаёт переключение языка на Ctrl + Shift. */
 	LA_WISP, /* Задаёт переключение языка на Win + Shift. */
+	LA_CTSP, /* Задаёт переключение языка на Ctrl + Space. */
 
 	/* -------------------------------------------------------------------- */
 	/* SAFE_RANGE данной библиотеки. */
@@ -305,7 +306,7 @@ enum LangChange {
 };
 
 // Переменная, в которой можно менять текущий способ смены языка
-enum LangChange lang_current_change = 
+enum LangChange lang_current_change =
 #ifdef LANG_CHANGE_DEFAULT
   LANG_CHANGE_DEFAULT;
 #else

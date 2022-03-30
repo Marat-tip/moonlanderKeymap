@@ -370,7 +370,7 @@ void lang_synchronize(void) {
     case LANG_CHANGE_CTRL_SPACE: {
       register_code(KC_LCTL);
       register_code(KC_SPACE);
-      wait_ms(100);
+      wait_ms(50);
       unregister_code(KC_SPACE);
       unregister_code(KC_LCTL);
     } break;
@@ -509,6 +509,11 @@ bool lang_shift_process_custom_keycodes(Key key, keyrecord_t* record) {
     case LA_WISP:
       if (down) {
         lang_current_change = LANG_CHANGE_WIN_SPACE;
+      }
+      return false;
+    case LA_CTSP:
+      if (down) {
+        lang_current_change = LANG_CHANGE_CTRL_SPACE;
       }
       return false;
     case AG_3DOT:
