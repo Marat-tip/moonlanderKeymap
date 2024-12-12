@@ -57,6 +57,7 @@ enum Layers {
   L_RU_S,
   L_SYMBOLS,
   L_NUMBERS,
+  L_GAMING,
 };
 
 enum custom_keycodes {
@@ -106,7 +107,7 @@ enum tap_dance_codes {
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     LGUI(KC_A), \
     KC_TAB, LH1,     LH2,     LH3,     LH4,     LH5,     TD(DANCE_1), \
     SFT_N_O,     LD1,     LD2,     LD3,     LD4,     LD5, \
-    CTRL_0,  ALT_0, NONE_KEY, OSL(L_NUMBERS), OSL(L_SYMBOLS), \
+    CTRL_0,  ALT_0, TG(L_GAMING), OSL(L_NUMBERS), OSL(L_SYMBOLS), \
     KC_TAB, /* LEFT RED THUMB KEY */ \
     SFT_N, KC_BSPACE, TD(DANCE_4), /* LEFT THUMB KEYS */ \
     \
@@ -222,6 +223,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
+
+    // RIGHT HALF
+    _______, _______,  _______, _______, _______, _______, _______,
+    _______, _______,  AG_4,    AG_5,    AG_6,    _______, _______,
+    _______, _______,  AG_0,    AG_1,    AG_2,    AG_3,    _______,
+             _______,  AG_9,    AG_8,    AG_7,    _______, _______,
+    _______,  _______,  _______,  _______,  _______,
+    TG(L_NUMBERS), // RIGHT RED THUMB KEY
+    _______, _______, _______ // RIGHT THUMB KEYS
+  ),
+
+  [L_GAMING] = MY_layout(
+    // LEFT HALF
+    _______, _______, _______, _______, _______, KC_F6, _______,
+    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,
+    SFT_N,   _______, _______, _______, _______, _______,
+    _______, _______, TG(L_GAMING), _______, _______,
+    KC_ESCAPE, // LEFT RED THUMB KEY
+    EN_Q, KC_SPC, EN_R, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______,  _______, _______, _______, _______, _______,
