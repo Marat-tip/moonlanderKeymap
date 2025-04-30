@@ -369,9 +369,11 @@ void lang_synchronize(void) {
     } break;
     case LANG_CHANGE_CTRL_SPACE: {
       register_code(KC_LCTL);
+      wait_ms(100);
       register_code(KC_SPACE);
-      wait_ms(50);
+      wait_ms(100);
       unregister_code(KC_SPACE);
+      wait_ms(100);
       unregister_code(KC_LCTL);
     } break;
   }
